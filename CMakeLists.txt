@@ -3,12 +3,24 @@ project(trimeta)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(header_files
-        "include/trimeta/detail/generic_primitives.hpp"
-        "include/trimeta/unit_primitives.hpp"
-        "include/trimeta/clock.hpp")
+set(alu_files
+        include/trimeta/alu/adder.hpp
+        include/trimeta/alu/alu.hpp)
 
-set(include_files ${header_files})
+set(detail_files
+        include/trimeta/detail/generic_primitives.hpp)
+
+set(lib_files
+        include/trimeta/lib/and.hpp
+        include/trimeta/lib/decoder.hpp
+        include/trimeta/lib/mux.hpp
+        include/trimeta/lib/not.hpp
+        include/trimeta/lib/or.hpp)
+
+set(memory_files
+        include/trimeta/memory/dff.hpp)
+
+set(include_files ${alu_files} ${detail_files} ${lib_files} ${memory_files})
 
 add_library(trimeta INTERFACE)
 target_sources(trimeta INTERFACE ${include_files})
