@@ -1,6 +1,6 @@
 set(test_files
         main.cpp
-        test_adder.cpp)
+        test_memory.cpp)
 
 add_executable(trimeta_test ${test_files})
 target_link_libraries(trimeta_test PUBLIC trimeta)

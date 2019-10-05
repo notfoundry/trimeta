@@ -111,7 +111,7 @@ namespace tm::lib {
     >;
 
     template <
-            class E, class S0, class S1, class S2, class S3, class S4, class S5, class S6, class S7,
+            class S0, class S1, class S2, class S3, class S4, class S5, class S6, class S7,
             class O0, class O1, class O2, class O3, class O4, class O5, class O6, class O7,
             class O8, class O9, class O10, class O11, class O12, class O13, class O14, class O15,
             class O16, class O17, class O18, class O19, class O20, class O21, class O22, class O23,
@@ -145,8 +145,8 @@ namespace tm::lib {
             class O240, class O241, class O242, class O243, class O244, class O245, class O246, class O247,
             class O248, class O249, class O250, class O251, class O252, class O253, class O254, class O255
     >
-    using decoder_8_256_e = dmm::assembly<
-            dmm::in<E, S0, S1, S2, S3, S4, S5, S6, S7>,
+    using decoder_8_256 = dmm::assembly<
+            dmm::in<S0, S1, S2, S3, S4, S5, S6, S7>,
             dmm::out<
                     O0, O1, O2, O3, O4, O5, O6, O7,
                     O8, O9, O10, O11, O12, O13, O14, O15,
@@ -182,8 +182,8 @@ namespace tm::lib {
                     O248, O249, O250, O251, O252, O253, O254, O255
             >,
 
-            decoder_4_16_e<
-                    E*, S4*, S5*, S6*, S7*,
+            decoder_4_16<
+                    S4*, S5*, S6*, S7*,
                     dmm::wire<'E', 0>, dmm::wire<'E', 1>, dmm::wire<'E', 2>, dmm::wire<'E', 3>,
                     dmm::wire<'E', 4>, dmm::wire<'E', 5>, dmm::wire<'E', 6>, dmm::wire<'E', 7>,
                     dmm::wire<'E', 8>, dmm::wire<'E', 9>, dmm::wire<'E', 10>, dmm::wire<'E', 11>,

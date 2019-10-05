@@ -18,7 +18,9 @@ set(lib_files
         include/trimeta/lib/or.hpp)
 
 set(memory_files
-        include/trimeta/memory/dff.hpp)
+        include/trimeta/memory/dff.hpp
+        include/trimeta/memory/register.hpp
+        include/trimeta/memory/ram.hpp)
 
 set(include_files ${alu_files} ${detail_files} ${lib_files} ${memory_files})
 
